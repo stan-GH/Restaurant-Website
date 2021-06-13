@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Oswald";
+}
+
+:root {
+    --main-bg-color: #fc7f03;
+}
+
+header {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    width: 1110px;
+    display: flex;
+    background-color: var(--main-bg-color);
+}
+
+nav {
+    margin-left: 200px;
+}
+
+nav .nav-list {
+    display: flex;
+}
+
+nav li {
+    list-style-type: none;
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: "Oswald";
+    letter-spacing: 2px;
+    font-size: 20px;
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin: 0 auto;
+    width: 1110px;
+    background-color: var(--main-bg-color);
+}
+
+main .headline-container {
+    margin-top: 10px;
+    margin-left: 100px;
+    display: flex;
+}
+
+main .headline-container .headline-title {
+    width: 350px;
+    height: 200px;
+    padding: 10px;
+}
+
+main .headline-container h1 {
+    font-size: 60px;
+    font-family: "Oswald";
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+main .headline-container .showcase-image-container {
+    margin-left: 150px;
+    width: 350px;
+    height: 300px;
+    border: 1px solid pink;
+}
+
+main .secondary-info-container {
+    margin-top: 100px;
+    margin-left: 100px;
+    display: flex;
+}
+
+main .secondary-info-container .specials-container {
+    border: 10px solid black;
+    width: 300px;
+    height: 300px;
+}
+
+main .secondary-info-container .specials-container h2 {
+    font-family: "Oswald";
+    font-size: 35px;
+    text-align: center;
+}
+
+main .secondary-info-container .specials-container .image-container {
+    margin-top: 30px;
+}
+
+main .secondary-info-container .hiring-container {
+    margin-left: 150px;
+    margin-top: 55px;
+    border: 10px solid black;
+    width: 300px;
+    height: 200px;
+}
+
+main .secondary-info-container .hiring-container h2 {
+    font-size: 35px;
+    text-align: center;
+}
+
+main .secondary-info-container .hiring-container .join-team-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+main .secondary-info-container .hiring-container a {
+    font-size: 25px;
+    text-decoration: none;
+}
+
+footer {
+    margin: 0 auto;
+    width: 1110px;
+    margin-top: 10px;
+    display: flex;
+    background-color: var(--main-bg-color);
+}
+
+footer li {
+    list-style-type: none;
+}
+
+footer .social-media-links {
+    margin: 20px;
+}
+
+footer .social-media-links li {
+    padding: 5px 5px 0 0;
+}
+
+footer .footer-nav {
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+footer .footer-nav li {
+    padding: 5px 5px 0 0;
+}
