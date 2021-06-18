@@ -1,0 +1,113 @@
+main {
+    background-color: var(--main-bg-color);
+    height: 800px;
+}
+
+main .main-container {
+    margin: 0 auto;
+    width: 1110px;
+    margin-left: 500px;
+}
+
+main .headline-container {
+    display: flex;
+}
+
+main .headline-container h1 {
+    margin-top: 50px;
+}
+
+main h2 {
+    text-decoration: underline;
+}
+
+main .headline-container .headline-title {
+    width: 350px;
+    height: 200px;
+    padding: 10px;
+}
+
+main .headline-container h1 {
+    font-size: 60px;
+    font-family: "Oswald";
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+main .headline-container .showcase-image-container {
+    margin-left: 150px;
+    width: 350px;
+    height: 300px;
+    margin-top: 20px;
+    /* border: 5px solid black; */
+    box-shadow: 10px 10px 30px black;
+}
+
+main .headline-container .showcase-image-container img {
+    width: 350px;
+    height: 300px;
+}
+main .secondary-info-container {
+    margin-top: 100px;
+    /* margin-left: 100px; */
+    display: flex;
+}
+
+main .secondary-info-container .specials-container {
+    /* border: 5px solid black; */
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
+    background-color: black;
+    border-radius: 5px;
+}
+
+main .secondary-info-container .specials-container h2 {
+    font-family: "Oswald";
+    font-size: 35px;
+    text-align: center;
+}
+
+main .secondary-info-container .specials-container .image-container {
+    margin-top: 30px;
+}
+
+main .secondary-info-container .specials-container .image-container img {
+    width: 300px;
+    height: 220px;
+}
+
+main .secondary-info-container .hiring-container {
+    margin-left: 200px;
+    margin-top: 55px;
+    border: 10px solid black;
+    border-radius: 5px;
+    background-color: black;
+    width: 300px;
+    height: 200px;
+}
+
+main .secondary-info-container .hiring-container h2 {
+    font-size: 35px;
+    text-align: center;
+}
+
+main .secondary-info-container .hiring-container .join-team-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+main .secondary-info-container .hiring-container a {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    width: 250px;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+}
+
+main .secondary-info-container .hiring-container a:hover {
+    font-size: 30px;
+}

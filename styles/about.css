@@ -1,0 +1,112 @@
+main .showcase-container {
+    position: relative;
+    width: auto;
+}
+
+main .restaurant-img-container {
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url("../images/restaurant_cropped.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+main .showcase-headline {
+    top: 100px;
+    left: 300px;
+    position: absolute;
+}
+
+main .showcase-headline h1{
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+main .showcase-headline h4 {
+    font-size: 25px;
+    color: #9e9595;
+}
+
+main .about-us {
+    height: 800px;
+    position: relative;
+    width: 50%;
+    /* border: solid 10px red; */
+    margin: auto;
+}
+
+main .about-us .showcase-img {
+    height: 300px;
+    width: 500px;
+}
+
+main .about-us .about-us-descr {
+    position: absolute;
+    left: 170px;
+    top: 50px;
+}
+
+main .about-us .about-us-descr h2 {
+    font-size: 50px;
+}
+
+main .about-us .summary {
+    width: 300px;
+    font-size: 20px;
+}
+
+main .about-us .showcase-img-items {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+}
+
+#showcase-img-1 {
+    position: absolute;
+    top: 300px;
+}
+
+#showcase-img-2 {
+    position: absolute;
+    top: 20px;
+    left: 500px;
+    height: 400px;
+    width: 350px;
+}
+
+main .staff img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+main .staff .table {
+    background-color: #aeafb0;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0px 0px 20px black;
+}
+
+main .staff .table .row {
+    display: flex;
+    justify-content: center;
+}
+
+main .staff .table .chef {
+    margin: 80px;
+}
+
+main .staff h2 {
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 3px;
+}
+
+main .staff .row h3 {
+    text-align: center;
+    font-size: 40px;
+}
+
