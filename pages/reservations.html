@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Restaurant menu." />
+        <meta name="author" content="Sean Tan" />
+        <title> Basic Restaurant | Reservations </title>
+        <link rel="stylesheet" href="../styles/styles.css" />
+        <link rel="stylesheet" href="../styles/reservations.css" />
+    </head>
+
+    <body>
+        <header>
+            <div class="header-container">
+                <div class="logo-container">
+                    <a href="./index.html"> <h2> Basic Restaurant </h2> </a>
+                </div>
+
+                <nav>
+                    <ul class="nav-list">
+                        <li> <a href="./menu.html"> Menu </a> </li>
+                        <li> <a href="./reservations.html"> Reservations </a> </li>
+                        <li> <a href="./locations.html"> Locations </a> </li> 
+                        <li> <a href="./about.html"> About </a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main> 
+            <div class="headline-container">
+                <div class="background-img-container">
+                </div>
+
+                <div class="main-title">
+                    <h1> Book A Reservation </h1>
+                </div>
+            </div>
+
+            <div class="reserve-container"> 
+                <h2> Pick a date to reserve your seat </h2>
+                <form>
+                    <input type="date" id="reservation" step="1">
+                    <button type="button" id="submit-reservation"> Submit </button>
+                </form>
+
+                <div id="available-reservation-times"></div>
+            </div>
+            
+        </main> 
+
+        <footer>
+            <div class="footer-container">
+                <div class="social-media-links">
+                    <div class="title-container">
+                        <h3> Follow Us On Social Media </h3>
+                    </div>
+                    <ul>
+                        <li> Facebook </li>
+                        <li> Twitter </li>
+                        <li> Instagram </li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li> Home </li>
+                        <li> Menu </li>
+                        <li> Locations </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../scripts/reservation.js"></script>
+    </body>
+</html>

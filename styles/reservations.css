@@ -1,0 +1,80 @@
+main {
+    height: 1000px;
+}
+
+main .headline-container {
+    height: 300px;
+    position: relative;
+}
+
+main .headline-container .background-img-container {
+    height: 300px;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url("../images/restaurant_seats_cropped.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+main .headline-container .main-title {
+    position: absolute;
+    top: 150px;
+    left: 700px;
+}
+
+main .headline-container .main-title h1 {
+    font-size: 70px;
+    letter-spacing: 4px;
+}
+
+main .reserve-container {
+    margin-top: 50px;
+}
+
+main .reserve-container h2 {
+    text-align: center;
+    font-size: 50px;
+    color: black;
+}
+
+main .reserve-container form {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+main .reserve-container form input{
+    width: 250px;
+    font-size: 30px;
+    background-color: black;
+    color: white;
+}
+
+main .reserve-container form button {
+    width: 90px;
+    margin-left: 50px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+main .reserve-container form button:hover {
+    /* background-color: #eea0a5; */
+    /* background-color: #ebeff5; */
+    background-color: #d0d4d9;
+}
+
+main .reserve-container #available-reservation-times {
+    width: 30%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+main .reserve-container #available-reservation-times .reservation-btn {
+    width: 150px;
+    height: 50px;
+    margin: 20px;
+}
