@@ -20,6 +20,12 @@ function removeAllChildNodes(parent) {
     }
 }
 
+function reserveTimeAction(timeReserved, dateReserved) {
+    localStorage.setItem('reservedTime', timeReserved);
+    localStorage.setItem('reservedDate', dateReserved);
+    location.href = "signup.html";
+} 
+
 document.getElementById("submit-reservation").onclick = () => {
     removeAllChildNodes(document.getElementById("available-reservation-times"));
 
@@ -36,6 +42,8 @@ document.getElementById("submit-reservation").onclick = () => {
     let month = date.slice(5, 7)
     month = months[parseInt(month) - 1];
     let day = date.slice(date.length-2, date.length);
+    let year = date.slice(0, 4);
+    let fullDate = month + " " + day + ", " + year;
     
     
     let availableTimes = ["10:00AM", "10:30AM", "11:00AM", "11:30AM", "12:00PM",
@@ -57,6 +65,7 @@ document.getElementById("submit-reservation").onclick = () => {
                     let btn = document.createElement("button");
                     btn.className = "reservation-btn";
                     btn.innerHTML = time;
+                    btn.onclick = () => {reserveTimeAction(time, fullDate)};
                     if (counter++ <= 3) {
                         reservationItemRow.appendChild(btn);
                     } else {
@@ -64,7 +73,6 @@ document.getElementById("submit-reservation").onclick = () => {
                         reservationItemRow = document.createElement("div");
                         counter = 1;
                     }
-                    // reservationContainer.appendChild(btn);
                 }
             })
         }
