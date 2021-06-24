@@ -50,9 +50,9 @@ document.getElementById("submit-reservation").onclick = () => {
                           "12:30PM", "1:00PM", "1:45PM", "2:30PM", "3:00PM",
                           "3:30PM", "4:00PM", "6:00PM", "6:30PM", "7:00PM", 
                           "7:30PM", "8:00PM", "8:15PM", "8:30PM", "9:00PM",
-                          "9:30PM", "10:00PM"];
+                          "9:30PM"];
 
-    fetch("http://localhost:3000/reservation/" + month, options).then((res) => res.json()).then(reservationTimeData => {
+    fetch("http://localhost:3000/reservation/" + year + "/" + month + "/" + day, options).then((res) => res.json()).then(reservationTimeData => {
         if (reservationTimeData.success) {
             let reservationContainer = document.getElementById("available-reservation-times");
 
@@ -61,18 +61,24 @@ document.getElementById("submit-reservation").onclick = () => {
             reservationItemRow.className = "reservation-item";
 
             availableTimes.forEach((time) => {
-                if (Object.keys(reservationTimeData.data).length === 0 || Object.keys(reservationTimeData.data).includes(day) && !reservationTimeData.data[day].includes(time)) {
-                    let btn = document.createElement("button");
-                    btn.className = "reservation-btn";
-                    btn.innerHTML = time;
+                let btn = document.createElement("button");
+                btn.className = "reservation-btn";
+                btn.innerHTML = time;
+                
+                if (reservationTimeData.data == null || reservationTimeData.data.length === 0 || !reservationTimeData.data.includes(time)) {
                     btn.onclick = () => {reserveTimeAction(time, fullDate)};
-                    if (counter++ <= 3) {
-                        reservationItemRow.appendChild(btn);
-                    } else {
-                        reservationContainer.appendChild(reservationItemRow);
-                        reservationItemRow = document.createElement("div");
-                        counter = 1;
-                    }
+                } else {
+                    btn.disabled = true;
+                    btn.id = "disabled";
+                }
+
+                if (counter++ < 3) {
+                    reservationItemRow.appendChild(btn);
+                } else {
+                    reservationItemRow.appendChild(btn);
+                    reservationContainer.appendChild(reservationItemRow);
+                    reservationItemRow = document.createElement("div");
+                    counter = 1;
                 }
             })
         }

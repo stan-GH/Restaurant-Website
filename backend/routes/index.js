@@ -16,12 +16,12 @@ db.once("open", () => console.log("connected to the database"));
 // checks if connection with the database is successful
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
-router.get("/:reservationMonth", function(req, res, next) {
-  ReservationDate.findOne({month: req.params.reservationMonth}, function(err, results) {
+router.get("/:year/:month/:day", function(req, res, next) {
+  ReservationDate.findOne({month: req.params.month, year: req.params.year}, function(err, results) {
     if (err) {
       return res.json({success: false, error: err});
     } else {
-      return res.json({success: true, data: results.dates});
+      return res.json({success: true, data: results.dates.get(req.params.day)});
     }
   })
 });
@@ -58,6 +58,27 @@ router.post("/", function(req, res, next) {
       return res.json({success: true});
     }
   });
+});
+
+router.put("/time", function(req, res, next) {
+  ReservationDate.findOne({month: req.body.month, year: req.body.year}, function(err, results) {
+    if (err) {
+      return res.json({success: false, error: err});
+    } else {
+      if (results.dates.get(req.body.day) == null) {
+        results.dates.set(req.body.day, [req.body.timeReserved]);
+      } else {
+        results.dates.get(req.body.day).push(req.body.timeReserved);
+      }
+      ReservationDate.findOneAndUpdate({month: req.body.month, year: req.body.year}, {dates: results.dates}, function(err2, results2) {
+        if (err2) {
+          return res.json({success: false, error: err});
+        } else {
+          return res.json({success: true});
+        }
+      });
+    }
+  })
 })
 
 

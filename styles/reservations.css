@@ -71,10 +71,20 @@ main .reserve-container #available-reservation-times {
     width: 30%;
     margin: auto;
     margin-top: 30px;
+    overflow-y: auto;
+    min-width: 600px;
+    max-width: 600px;
+    height: 400px;
 }
 
 main .reserve-container #available-reservation-times .reservation-btn {
     width: 150px;
     height: 50px;
     margin: 20px;
+}
+
+#disabled {
+    color: #505050;
+    cursor: not-allowed;
+    pointer-events: none;
 }

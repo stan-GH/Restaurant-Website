@@ -22,9 +22,22 @@ document.getElementById("submitForm").onclick = () => {
             body: JSON.stringify(data)
         }
 
-        fetch("http://localhost:3000/reservation/", options).then((res) => res.json).then(resData => {
+        fetch("http://localhost:3000/reservation/", options).then((res) => res.json()).then((resData) => {
             if (resData.success) {
-                console.log("success");
+                let data = {month: reservedDate.slice(0,4), year: reservedDate.slice(reservedDate.length - 4, reservedDate.length), day: reservedDate.slice(5, 7), timeReserved: reservedTime};
+                let options = {
+                    method: "put",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                }
+
+                fetch("http://localhost:3000/reservation/time", options).then((res) => res.json()).then(resData => {
+                    if (resData.success) {
+                        console.log("success");
+                    }
+                })
             }
         });
     } else {
